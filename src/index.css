@@ -7,8 +7,14 @@ body {
 }
 
 .pane {
-  height: 50vh;
+ height: 50vh;
   display: flex;
+}
+@media screen and (max-width: 480px) {
+  .top-pane {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .editor-container {
@@ -18,12 +24,10 @@ body {
   flex-direction: column;
   padding: 0.5rem;
   background-color: hsl(225, 6%, 25%);
+  min-width: 32vw;
 }
 
-.editor-container.collapsed .CodeMirror-scroll {
-  position: absolute;
-  overflow: hidden !important;
-}
+
 
 .editor-title {
   display: flex;
@@ -35,6 +39,11 @@ body {
   border-top-left-radius: 0.5rem;
 }
 
+.editor-container.collapsed .CodeMirror-scroll {
+  position: absolute;
+  overflow: hidden !important;
+}
+
 .CodeMirror {
   height: 100% !important;
 }
@@ -44,4 +53,7 @@ body {
   border-bottom-right-radius: 0.5rem;
   border-bottom-left-radius: 0.5rem;
   overflow: hidden;
+}
+::-webkit-scrollbar {
+  display: none;
 }

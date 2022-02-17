@@ -23,7 +23,7 @@ function App() {
   }, [html, css, js])
 
   return (
-    <>
+    <div style={{display:"flex",flexDirection:"column"}}>
       <div className="pane top-pane">
         <Editor
           language="xml"
@@ -54,7 +54,7 @@ function App() {
           height="100%"
         />
       </div>
-    </>
+    </div>
   )
 }
 
