@@ -9,7 +9,7 @@ import { Controlled as ControlledEditor } from "react-codemirror2";
 export default function Editor(props) {
   const { language, displayName, value, onChange } = props;
 
-  function handleChange(editor, data, value) {
+  function handleChange(value) {
     onChange(value);
   }
 
